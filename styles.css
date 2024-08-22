@@ -1,4 +1,4 @@
-#flex-container {
+#grid-container {
     display: flex;
     flex-wrap: wrap;
     width: 800px; /* Adjust the width as needed */
@@ -11,4 +11,9 @@
     background-color: lightgray;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.grid-item.hovered {
+    background-color: #3498db; /* Change to the color you want for the trail */
 }
