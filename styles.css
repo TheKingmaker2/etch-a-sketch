@@ -1,19 +1,20 @@
 #grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 800px; /* Adjust the width as needed */
-    height: 800px; /* Adjust the height as needed */
+    width: 800px; /* Fixed width for the grid container */
+    height: 800px; /* Fixed height for the grid container */
 }
 
 .grid-item {
-    flex: 0 0 calc(100% / 16); /* Each item takes up 1/16th of the container width */
-    height: calc(100% / 16); /* Each item takes up 1/16th of the container height */
+    flex: 0 0 auto; /* Allows each item to be sized manually */
+    width: calc(100% / var(--grid-size)); /* Adjust width based on grid size */
+    height: calc(100% / var(--grid-size)); /* Adjust height based on grid size */
     background-color: lightgray;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s;
 }
 
 .grid-item.hovered {
-    background-color: #3498db; /* Change to the color you want for the trail */
+    background-color: #3498db; /* Change only the hovered item’s background color */
 }
