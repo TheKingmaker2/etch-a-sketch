@@ -2,6 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const gridContainer = document.getElementById('grid-container');
     const newGridButton = document.getElementById('button');
 
+    // Function to generate a random RGB color
+    function getRandomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
     function createGrid(size) {
         // Clear any existing grid
         gridContainer.innerHTML = '';
@@ -21,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add hover effect
         items.forEach(item => {
             item.addEventListener('mouseover', function() {
-                this.classList.add('hovered');
+                this.style.backgroundColor = getRandomColor();
             });
         });
     }
